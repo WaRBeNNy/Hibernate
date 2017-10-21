@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.Project" table="projects">
+        <meta attribute="class-description">
+            This class contains project details.
+        </meta>
+        <id name="id" type="int" column="project_id">
+            <generator class="native"/>
+        </id>
+        <property name="name" column="projectname" type="string"/>
+        <property name="customer_id" column="customer_id" type="int"/>
+        <property name="company_id" column="comp_id" type="int"/>
+        <property name="cost" column="cost" type="double"/>
+    </class>
+
+</hibernate-mapping>
